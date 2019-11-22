@@ -1,6 +1,17 @@
 /*
  * Arduino LED toggle
  * By: Evan Pratten
+ * 
+ * ## Goal ##
+ * Use an external button to toggle the builtin LED on an Arduino UNO R3 (pin 13)
+ * 
+ * ## Program design ##
+ * Read button state to an input buffer that will only count as "on" if the 
+ * entire buffer had the same state. This is a simple method of denouncing 
+ * the button. Larger buffers will increase reaction time, but decrease bouncing.
+ * 
+ * This state is then compared with the last to control a flip-flop, which then 
+ * is read to determine the desired output of the LED
 */
 
 // Definitions
@@ -30,7 +41,7 @@ void setup()
 
     // Write header
     Serial.begin(9600);
-    Serial.write("Program by: Evan Pratten <ewpratten>");
+    Serial.write("Program by: Evan Pratten <ewpratten@retrylife.ca>");
 }
 
 // Debounce the button
