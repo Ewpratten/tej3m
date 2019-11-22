@@ -1,5 +1,5 @@
 {
-    "sketch": "ledToggle/main.ino",
+    "sketch": "pwmLED/main.ino",
     "board": "arduino:avr:uno",
     "port": "/dev/ttyACM0"
 }

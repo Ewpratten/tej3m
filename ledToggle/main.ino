@@ -41,7 +41,7 @@ void setup()
 
     // Write header
     Serial.begin(9600);
-    Serial.write("Program by: Evan Pratten <ewpratten@retrylife.ca>");
+    Serial.write("Program by: Evan Pratten <ewpratten@retrylife.ca>\n");
 }
 
 // Debounce the button
