@@ -1,5 +1,5 @@
 {
-    "sketch": "pwmLED/main.ino",
+    "sketch": "cyclingLEDs/main.ino",
     "board": "arduino:avr:uno",
     "port": "/dev/ttyACM0"
 }
